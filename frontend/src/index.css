@@ -1,0 +1,286 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  color: #1f2937;
+  background: #f6f7fb;
+}
+
+html {
+  background: #f6f7fb;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f6f7fb;
+}
+
+.app-shell {
+  background: #f6f7fb !important;
+  color: #1f2937 !important;
+}
+
+.app-shell [class*="bg-slate-950"] {
+  background-color: #f8fafc !important;
+}
+
+.app-shell [class*="bg-slate-900"] {
+  background-color: #ffffff !important;
+}
+
+.app-shell [class*="bg-slate-800"] {
+  background-color: #f1f3f8 !important;
+}
+
+.app-shell [class*="bg-slate-700"] {
+  background-color: #e8ebf2 !important;
+}
+
+.app-shell [class*="bg-indigo-950"] {
+  background-color: #f1f0ff !important;
+}
+
+.app-shell [class*="bg-emerald-900"] {
+  background-color: #ecfdf5 !important;
+}
+
+.app-shell [class*="bg-red-950"],
+.app-shell [class*="bg-red-900"],
+.app-shell [class*="bg-rose-950"],
+.app-shell [class*="bg-rose-900"] {
+  background-color: #fff1f2 !important;
+}
+
+.app-shell [class*="bg-amber-950"],
+.app-shell [class*="bg-amber-900"] {
+  background-color: #fffbeb !important;
+}
+
+.app-shell [class*="border-slate-"] {
+  border-color: #e4e7ef !important;
+}
+
+.app-shell .text-white {
+  color: #1e293b !important;
+}
+
+.app-shell button.bg-indigo-600,
+.app-shell a.bg-indigo-600,
+.app-shell button.bg-indigo-700,
+.app-shell a.bg-indigo-700,
+.app-shell button.bg-violet-600,
+.app-shell a.bg-violet-600 {
+  color: #ffffff !important;
+}
+
+.app-shell button[class*="bg-[#4934C6]"] {
+  background-color: #4934c6 !important;
+  color: #ffffff !important;
+}
+
+.app-shell button[class*="bg-[#4934C6]"]:hover {
+  background-color: #3826a8 !important;
+}
+
+.app-shell [class*="text-slate-100"],
+.app-shell [class*="text-slate-200"] {
+  color: #263248 !important;
+}
+
+.app-shell [class*="text-slate-300"] {
+  color: #475569 !important;
+}
+
+.app-shell [class*="text-slate-400"],
+.app-shell [class*="text-slate-500"],
+.app-shell [class*="text-slate-600"] {
+  color: #64748b !important;
+}
+
+.app-shell [class*="text-indigo-300"],
+.app-shell [class*="text-indigo-400"],
+.app-shell [class*="text-violet-300"],
+.app-shell [class*="text-violet-400"] {
+  color: #5145cd !important;
+}
+
+.app-shell [class*="text-emerald-300"],
+.app-shell [class*="text-emerald-400"] {
+  color: #047857 !important;
+}
+
+.app-shell [class*="text-red-300"],
+.app-shell [class*="text-red-400"],
+.app-shell [class*="text-rose-300"],
+.app-shell [class*="text-rose-400"] {
+  color: #be123c !important;
+}
+
+.app-shell [class*="text-amber-300"],
+.app-shell [class*="text-amber-400"] {
+  color: #a16207 !important;
+}
+
+.app-shell [class*="text-sky-300"],
+.app-shell [class*="text-sky-400"],
+.app-shell [class*="text-cyan-300"],
+.app-shell [class*="text-cyan-400"] {
+  color: #0369a1 !important;
+}
+
+.app-shell [class*="shadow-indigo-"],
+.app-shell [class*="shadow-black"] {
+  --tw-shadow-color: rgb(31 41 55 / 8%) !important;
+}
+
+.app-shell textarea,
+.app-shell input,
+.app-shell select {
+  color: #263248;
+  background-color: #ffffff;
+}
+
+.app-shell textarea::placeholder,
+.app-shell input::placeholder {
+  color: #94a3b8;
+}
+
+.app-shell button,
+.app-shell a {
+  transition-duration: 150ms;
+}
+
+.app-shell .bg-gradient-to-r {
+  background-image: none;
+  color: #1e293b;
+}
+
+.app-shell nav {
+  background-color: rgb(255 255 255 / 94%) !important;
+  border-color: #e8eaf0 !important;
+  box-shadow: 0 2px 12px rgb(15 23 42 / 4%);
+}
+
+.app-shell nav .bg-gradient-to-tr {
+  background: #5145cd !important;
+}
+
+.app-shell nav .text-white {
+  color: #ffffff !important;
+}
+
+.app-shell nav [class*="bg-indigo-600/20"] {
+  background-color: #eef0ff !important;
+}
+
+.app-shell footer {
+  background-color: #ffffff !important;
+  border-color: #e8eaf0 !important;
+}
+
+.agent-timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.agent-timeline::before {
+  position: absolute;
+  top: 20px;
+  right: 10%;
+  left: 10%;
+  height: 1px;
+  background: #d9d5ee;
+  content: '';
+}
+
+.agent-timeline-step {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+.agent-step-marker {
+  z-index: 1;
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border: 1px solid #d9d5ee;
+  border-radius: 9999px;
+  background: #ffffff;
+  color: #4934c6;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.agent-step-card {
+  width: 100%;
+  min-width: 0;
+  margin-top: 12px;
+  border: 1px solid #e6e5ee;
+  border-radius: 16px;
+  background: #ffffff;
+  padding: 14px;
+  box-shadow: 0 4px 14px rgb(15 23 42 / 4%);
+}
+
+.studio-page button:focus-visible,
+.studio-page a:focus-visible,
+.studio-page input:focus-visible,
+.studio-page textarea:focus-visible,
+.studio-page select:focus-visible,
+.studio-page summary:focus-visible {
+  outline: 2px solid #4934c6;
+  outline-offset: 2px;
+}
+
+@media (max-width: 1279px) {
+  .agent-timeline {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .agent-timeline::before {
+    top: 20px;
+    bottom: 20px;
+    left: 19px;
+    width: 1px;
+    height: auto;
+  }
+
+  .agent-timeline-step {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .agent-step-marker {
+    flex: 0 0 40px;
+  }
+
+  .agent-step-card {
+    margin-top: 0;
+  }
+}
+
+.app-shell .bg-slate-950\/70,
+.app-shell .bg-slate-950\/80,
+.app-shell .bg-slate-900\/60,
+.app-shell .bg-slate-900\/50,
+.app-shell .bg-slate-900\/40 {
+  box-shadow: 0 8px 26px rgb(15 23 42 / 4%);
+}
+
+code, pre {
+  font-family: 'JetBrains Mono', monospace;
+}
